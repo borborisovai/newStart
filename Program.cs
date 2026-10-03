@@ -92,12 +92,27 @@ Counter counter354 = new Counter();*/
 // }
 
 
-BinaryHeap heap = new();
+// BinaryHeap heap = new();
+//
+// Random r = new();
+//
+// for (int i = 0;i <= 10;i++){
+//     heap.Add(r.Next(1, 100));
+// }
+//
+// heap.Print();
 
-Random r = new();
+Random random = new();
 
-for (int i = 0;i <= 10;i++){
-    heap.Add(r.Next(1, 100));
+// [7, 14, null]
+List<int> num = [7, 14, 4, 8, 11];
+
+
+IEnumerable<int> numbers = num;
+
+var sorted = Sorters.Order(numbers, (a, b) => a.CompareTo(b));
+
+foreach (var n in sorted)
+{
+    Console.WriteLine(n);
 }
-
-heap.Print();
